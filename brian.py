@@ -11,6 +11,7 @@ print("im looking :o")
 
 while True:
     driver.get(url)
+    time.sleep(1)
     if login_flag == False:
         time.sleep(6)
         login_flag = True
