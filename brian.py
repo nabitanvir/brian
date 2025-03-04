@@ -11,8 +11,6 @@ print("im looking :o")
 
 while True:
     driver.get(url)
-    time.sleep(0.1)
-
     if login_flag == False:
         time.sleep(6)
         login_flag = True
@@ -36,7 +34,6 @@ while True:
                         driver.switch_to.window(driver.window_handles[0])
                         print("back to looking :o")
                         break
-
     except Exception as e:
         print("brokey :( ->", e)
 driver.quit()
