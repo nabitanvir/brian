@@ -2,6 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import sys
+from openai import OpenAI
+
+
+with open("apikey.txt", "r") as file:
+    api_key = file.read().strip()
+if api_key:
+    print("Open API key found: " + api_key)
+else:
+    print ("API Key not found!")
+client = OpenAI(api_key)
 
 driver = webdriver.Chrome()
 url = "https://server.thecoderschool.com/thegames/results.php?game_id=B2F502ESNAKET&results_code_id=1&showall"
